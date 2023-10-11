@@ -40,6 +40,3 @@ class Calculate_income_Tax:
                 break
         total_taxes -= self.MONTHLY_PERSONAL_RELIEF
         return total_taxes
-
-
-income_one = Calculate_income_Tax()

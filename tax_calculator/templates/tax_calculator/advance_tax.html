@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advance Tax</title>
+  </head>
+  <body>
+    <h2>Advance Tax</h2>
+    <p>
+      <i
+        >Advance tax is a tax paid in advance before a public service vehicle or
+        commercial vehicle is licensed at the rates applicable.</i
+      >
+    </p>
+    <div>
+      <form method="POST">
+        {% csrf_token %}
+        <select id="advance_tax_categories" name="advance_tax">
+          <option value="Vans_pickups_trailers_lorries_trucks">
+            Vans, Pickups, Trailers, Lorries and Trucks
+          </option>
+          <option value="Saloon_stationwagon_minibus_bus_coach">
+            Saloon, Station Wagon, Minibus, Bus and Coach
+          </option>
+        </select>
+        <input
+          type="text"
+          id="advance_tax"
+          placeholder="Capacity of your PSV"
+          name="advance_tax_capacity"
+        />
+        <input type="submit" value="Calculate Advance Tax" />
+      </form>
+    </div>
+    <div>
+      <p>You will pay: {{final_advance_tax}}</p>
+    </div>
+  </body>
+</html>

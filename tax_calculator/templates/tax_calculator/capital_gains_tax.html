@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capital Gains Tax</title>
+  </head>
+  <body>
+    <h2>Capital Gains Tax</h2>
+    <p>CGT is tax that is levied on:</p>
+    <p>
+      <i>
+        1. Gains which accrued to a company, an individual or partnership on or
+        after 1st January 2015 on transfer of property situated in Kenya,
+        acquired on or before January 2015.
+      </i>
+      <br />
+      <i
+        >2. Gains arising from the sale of shares or comparable interests in
+        foreign entities which derive more than 20% of their value directly or
+        indirectly from immovable property situated in Kenya to CGT in Kenya.
+        (effective 1st July 2023)
+      </i>
+      <br />
+      <i
+        >3. Similarly, CGT will also apply where a non-resident person who holds
+        more than 20% of the share capital of a Kenyan company directly or
+        indirectly disposes off their interest. (effective 1st July 203)</i
+      ><br />
+    </p>
+    <div>
+      <form method="POST">
+        {% csrf_token %}
+        <input
+          type="text"
+          id="capital_gains_tax"
+          placeholder="Amount arising from Gains"
+          name="capital_gains_tax"
+        />
+        <input type="submit" value="Calculate Capital Gains Tax" />
+      </form>
+      <div id="display_cgt">
+        <p>You will pay:{{final_cgt}}</p>
+        <p>Your Balance: {{balance}}</p>
+      </div>
+    </div>
+  </body>
+</html>

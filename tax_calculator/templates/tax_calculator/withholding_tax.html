@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Withholding Tax</h2>
+    <div>
+      <form method="POST">
+        {% csrf_token %}
+        <select
+          id="withholding_taxes_categories"
+          name="withholding_tax_category"
+        >
+          <option value="Artists_and_entertainers">
+            Artists and entertainers
+          </option>
+          <option value="Management_fees">Management Fees</option>
+          <option value="Professional_fees">Professional Fees</option>
+          <option value="Training_fees">Training Fees</option>
+          <option value="Gaming_and_gambling">
+            Gaming, Betting and Gambling
+          </option>
+          <option value="Royalties">Royalties</option>
+          <option value="Dividends">Dividends</option>
+          <option value="Equipment_leasing">Equipment Leasing</option>
+          <option value="Bank_interest">Bank Interest</option>
+          <option value="Housing_bond_interest">Housing Bond Interest</option>
+          <option value="Government_bearer_bonds">
+            Government Bearer Bonds
+          </option>
+          <option value="Other_bearer_bonds">Other Bearer Bonds</option>
+          <option value="Bearer_bonds_maturity_of_over_10yrs">
+            Bearer Bonds Maturity of Over 10years
+          </option>
+          <option value="Rent_buildings">Rent Buildings</option>
+          <option value="Rent_others">Rent Others</option>
+          <option value="Pension">Pension</option>
+          <option value="Insurance_commisions_brokers">
+            Insurance Commisions Brokers
+          </option>
+          <option value="Insurance_commissions_others">
+            Insurance Commissions Others
+          </option>
+          <option value="Consultancy_and_agency">Consultancy and Agency</option>
+          <option value="Contractual">Contractual</option>
+          <option value="Telecommunication_services">
+            Telecommunication Services
+          </option>
+          <option value="Natural_resource_income">
+            Natural Resource Income
+          </option>
+          <option value="Digital_content_monetization">
+            Digital Content Monetization
+          </option>
+          <option value="Sales_promotion">Sales Promotion</option>
+          <option value="Withholding_on_rental_income_tax">
+            Withholding on Rental Income Tax
+          </option>
+          <option value="Gains_from_financial_derivatives">
+            Gains From Financial Derivatives
+          </option>
+        </select>
+        <select id="residency" name="resident_type">
+          <option value="resident">Resident</option>
+          <option value="non_resident">Non Resident</option>
+        </select>
+        <input
+          type="text"
+          id="withholding_tax"
+          placeholder="Amount"
+          name="withholding_tax"
+        />
+        <input type="submit" value="Calculate Your Withholding Tax" />
+      </form>
+    </div>
+    <div>
+      <p>You will pay: {{final_withholding_tax}}</p>
+    </div>
+  </body>
+</html>

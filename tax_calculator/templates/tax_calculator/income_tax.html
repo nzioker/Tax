@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Income Tax</title>
+  </head>
+  <body>
+    <h2>Income Tax</h2>
+    <p>
+      <i
+        >Income tax is a direct tax that is imposed on income derived from
+        Business, Employment, Rent, Dividends, Interests, Pensions among
+        others..</i
+      >
+    </p>
+    <small><i>*select the deductibles applicable to you</i></small>
+    <div>
+      <form method="POST">
+        <select id="income_tax_deductibles" name="pension">
+          <option value="">Select</option>
+          <option value="Pension">Pension</option>
+        </select>
+        <select id="income_tax_deductibles" name="nhif">
+          <option value="">Select</option>
+          <option value="NHIF">NHIF</option>
+        </select>
+        <select id="income_tax_deductibles" name="nssf">
+          <option value="">Select</option>
+          <option value="NSSF">NSSF</option>
+        </select>
+        <select id="income_tax_deductibles" name="housing_levy">
+          <option value="">Select</option>
+          <option value="Housing_Levy">Housing Levy</option>
+        </select>
+        <input
+          type="text"
+          id="income_tax"
+          placeholder="Your income"
+          name="income_tax"
+        />
+        <input type="submit" value="Calculate Your PAYE" />
+      </form>
+    </div>
+  </body>
+</html>
