@@ -25,7 +25,7 @@ class Calculate_income_Tax:
         )
         return total_taxable_income
 
-    # Ths function calculates your
+    # This function calculates your payable income
     def income_tax_calculator(self, income):
         net_pay = income - self.income_tax(income, self.taxable_income(income))
         return net_pay
